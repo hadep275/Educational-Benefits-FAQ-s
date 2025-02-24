@@ -48,6 +48,7 @@ h1 {
 .faq-question {
   display: flex;
   align-items: center;
+  text-align: left;
   background-color: #007BFF;
   color: #fff;
   border: none;
