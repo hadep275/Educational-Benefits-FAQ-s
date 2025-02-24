@@ -103,14 +103,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 ## Acknowledgments
 - **Google Sheets API**: For making it easy to use Sheets as a backend for this project.
 - **GitHub Pages**: For providing an easy way to host static websites.
-
----
-
-### Notes for the Future
-
-This project is a **simple solution** to manage FAQs without the need for a complex backend. However, as you grow or scale the project, consider exploring more robust solutions like integrating a **real-time database**, **CMS**, or **API security measures**.
-
-For now, the project functions well as a **static site** with dynamic content, and the **Google Sheets API** makes it easy to keep the FAQ content up-to-date.
-```
-
 ---
