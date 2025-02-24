@@ -25,15 +25,17 @@ const url = `https://sheets.googleapis.com/v4/spreadsheets/1k4Z7_-ogV7sVc78DXI7g
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    console.log(data); // Log the fetched data to verify it
+    console.log(data); // Log the API response to check if there's an error message or unexpected response
+
+    if (!data.values) {
+      console.error("No data found or invalid range.");
+      return;
+    }
+
     const faqData = data.values; // The FAQ data (array of rows)
-    
-    if (!faqData) {
-      console.error("No FAQ data found in the sheet.");
-    } else {
-      faqData.forEach(row => {
-        const question = row[0]; // The question
-        const answer = row[1];   // The answer
+    faqData.forEach(row => {
+      const question = row[0]; // The question
+      const answer = row[1];   // The answer
 
       // Create the FAQ item
       const faqItem = document.createElement('div');
@@ -62,4 +64,3 @@ fetch(url)
   .catch(error => {
     console.error('Error fetching data from Google Sheets:', error);
   });
-
