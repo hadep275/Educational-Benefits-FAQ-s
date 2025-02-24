@@ -64,13 +64,13 @@ h1 {
   transform: scale(1.05);
 }
 
-.faq-icon {
+.faq-question .faq-icon {
   margin-right: 15px;
   font-size: 20px;
   transition: transform 0.3s ease;
 }
 
-.faq-text {
+.faq-question .faq-text {
   flex-grow: 1;
 }
 
