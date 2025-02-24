@@ -25,10 +25,15 @@ const url = `https://sheets.googleapis.com/v4/spreadsheets/1k4Z7_-ogV7sVc78DXI7g
 fetch(url)
   .then(response => response.json())
   .then(data => {
+    console.log(data); // Log the fetched data to verify it
     const faqData = data.values; // The FAQ data (array of rows)
-    faqData.forEach(row => {
-      const question = row[0]; // The question
-      const answer = row[1];   // The answer
+    
+    if (!faqData) {
+      console.error("No FAQ data found in the sheet.");
+    } else {
+      faqData.forEach(row => {
+        const question = row[0]; // The question
+        const answer = row[1];   // The answer
 
       // Create the FAQ item
       const faqItem = document.createElement('div');
