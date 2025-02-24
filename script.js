@@ -43,7 +43,7 @@ fetch(url)
       
       const questionButton = document.createElement('button');
       questionButton.classList.add('faq-question');
-      questionButton.innerHTML = `<span class="faq-icon">+</span><span class="faq-text">${question}</span>`;
+      questionButton.innerHTML = `<span class="faq-text"><span class="faq-icon">+</span>${question}</span>`;
 
       const answerDiv = document.createElement('div');
       answerDiv.classList.add('faq-answer');
